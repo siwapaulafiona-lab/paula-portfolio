@@ -2729,3 +2729,10 @@ h1 span {
     border-radius: 50%;
     background: #2e7d32;
 }
+/* PROJECT FEATURE IMAGE — MOBILE */
+
+@media (max-width: 768px) {
+    .project-feature-image {
+        width: 100%;
+    }
+}
