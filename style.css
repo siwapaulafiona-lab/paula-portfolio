@@ -2439,3 +2439,276 @@ h1 span {
         font-size: 8px;
     }
 }
+/* =====================================================
+   PORTFOLIO CHAT ASSISTANT
+   ===================================================== */
+
+.portfolio-chat {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    z-index: 9999;
+    font-family: inherit;
+}
+
+/* -------------------------
+   FLOATING BUTTON
+------------------------- */
+
+.chat-toggle {
+    width: 62px;
+    height: 62px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #111111;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.chat-toggle:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.chat-icon {
+    font-size: 24px;
+    line-height: 1;
+}
+
+
+/* -------------------------
+   CHAT WINDOW
+------------------------- */
+
+.chat-window {
+    position: absolute;
+    right: 0;
+    bottom: 78px;
+
+    width: 350px;
+    max-width: calc(100vw - 40px);
+
+    background: #f5f1e9;
+    color: #111111;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px) scale(0.97);
+
+    transform-origin: bottom right;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.portfolio-chat.is-open .chat-window {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+
+/* -------------------------
+   HEADER
+------------------------- */
+
+.chat-header {
+    padding: 20px 20px 18px;
+
+    background: #111111;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.chat-header h3 {
+    margin: 5px 0 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.chat-status {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+}
+
+.chat-close {
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+
+    background: transparent;
+    color: #ffffff;
+
+    font-size: 20px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.chat-close:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* -------------------------
+   CHAT BODY
+------------------------- */
+
+.chat-body {
+    padding: 22px;
+}
+
+.chat-message {
+    max-width: 290px;
+    padding: 15px 16px;
+
+    border-radius: 15px 15px 15px 4px;
+
+    background: #ffffff;
+
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+
+/* -------------------------
+   OPTIONS
+------------------------- */
+
+.chat-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+.chat-option {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    border-radius: 12px;
+
+    background: transparent;
+    color: #111111;
+
+    text-align: left;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.chat-option:hover {
+    background: #ffffff;
+    transform: translateX(3px);
+}
+
+
+/* =====================================================
+   CHAT — MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .portfolio-chat {
+        right: 12px;
+        bottom: 8px;
+    }
+
+    .chat-toggle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .chat-window {
+        width: 320px;
+        max-width: calc(100vw - 36px);
+        bottom: 72px;
+    }
+
+    .chat-body {
+        padding: 18px;
+    }
+}
+/* =====================================================
+   CHAT ASSISTANT LABEL
+   ===================================================== */
+
+.chat-toggle {
+    width: auto;
+    min-width: 62px;
+    height: 62px;
+    padding: 0 14px 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    border-radius: 50px;
+}
+
+.chat-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
+.chat-icon {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    color: #ffffff;
+}
+
+.chat-icon svg {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
