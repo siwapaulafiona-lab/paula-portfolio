@@ -73,8 +73,8 @@ if (portfolioChat && chatToggle && chatClose && chatBody) {
 
     // OPEN CHAT
     chatToggle.addEventListener("click", () => {
-        portfolioChat.classList.add("is-open");
-    });
+    portfolioChat.classList.toggle("is-open");
+});
 
 
     // CLOSE CHAT
