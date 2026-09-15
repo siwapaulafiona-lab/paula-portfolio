@@ -2712,3 +2712,20 @@ h1 span {
     height: 22px;
     display: block;
 }
+.chat-status {
+    color: rgba(245, 245, 242, 0.6);
+}
+
+.status-dot {
+    color: #2e7d32;
+}
+.chat-online-dot {
+    width: 6px;
+    height: 6px;
+
+    display: inline-block;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: #2e7d32;
+}
